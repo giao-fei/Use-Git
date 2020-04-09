@@ -1,0 +1,35 @@
+<!-- 
+  git上传：
+    一、官网下载git安装包
+    二、安装git，一直默认到安装完成
+          配置个人的用户名称和电子邮件地址：
+            git config --global user.name "runoob"
+            git config --global user.email test@runoob.com
+    三、在本地(D盘)创建一个本地仓库（文件夹dist）     
+    四、打开Git Bash并切换到本地文件夹（dist）中:
+         cd /d/dist
+    五、通过命令git init把这个(dist)文件夹变成Git可管理的仓库
+        这时你会发现Dist里面多了个.git文件夹，它是Git用来跟踪和管理版本库的。如果你看不到，是因为它默认是隐藏文件，那你就需要设置一下让隐藏文件可见。
+         git init
+    六、把你写好的项目粘贴到dist文件夹里面
+    七、你虽然把项目粘贴过来了，但还没有add到Git仓库上，然后我们通过git add .把刚才复制过来的项目全部添加到仓库上
+         git add .
+    八、用git commit把项目提交到仓库。
+         git commit -m "first commit（这个是随便取的名字）"
+    九、创建SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建
+         ssh-keygen -t rsa -C "邮箱"
+         然后一路回车。这时你就会在用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件  
+    十、登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，
+        再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密
+    十一、在Github上创建一个Git仓库（TestGit）
+    十二、在Github上创建好Git仓库之后我们就可以和本地仓库进行关联了，根据创建好的Git仓库页面的提示，在GitBath中切换到本地dist仓库中输入：
+           git remote add origin https://github.com/你的github的名字/TestGit.git
+    十三、关联好之后我们就可以把本地库的所有内容推送到远程仓库（也就是Github）上了，通过：
+           git push -u origin master
+        由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：
+           git push origin master
+    十四、当每次修改完项目再上传后需要重新 git add . 再 git commit -m "xxx"
+     十五、上传出现 ![reject]xxx 的时候，需要 git pull --rebase origin master 然后再 git push origin master
+  git下载：
+    git clone "项目地址"
+ --> 
