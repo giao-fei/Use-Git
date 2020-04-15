@@ -41,4 +41,5 @@
         4、dir                                      # 查看有哪些文件夹
         5、git rm -r --cached xxx(你的文件夹名称)     # 删除xxx文件夹
         6、git commit -m '删除了target'              # 提交,添加操作说明
+        7、git push -u origin master                # 将本次更改更新到github项目上去
 --> 
