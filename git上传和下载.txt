@@ -30,7 +30,15 @@
            git push origin master
     十四、当每次修改完项目再上传后需要重新 git add . 再 git commit -m "xxx"
     十五、上传出现 ![reject]xxx 的时候，需要 git pull --rebase origin master 然后再 git push origin master
-    十六、删除本地仓库已关联的远程仓库：git remote rm origin 
   git下载：
     git clone "项目地址"
- --> 
+  git删除：
+    一、删除本地仓库已关联的远程仓库：git remote rm origin 
+    二、用git删除github中某个文件夹：
+        1、首先进入你的本地git仓库中
+        2、git help --帮助
+        3、git pull origin master                   # 将远程仓库里面的项目拉下来
+        4、dir                                      # 查看有哪些文件夹
+        5、git rm -r --cached xxx(你的文件夹名称)     # 删除xxx文件夹
+        6、git commit -m '删除了target'              # 提交,添加操作说明
+--> 
