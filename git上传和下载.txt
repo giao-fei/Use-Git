@@ -42,4 +42,7 @@
         5、git rm -r --cached xxx(你的文件夹名称)     # 删除xxx文件夹
         6、git commit -m '删除了target'              # 提交,添加操作说明
         7、git push -u origin master                # 将本次更改更新到github项目上去
+   git新建分支：
+     一、git checkout -b xxx(分支名称)
+     二、查看所有分支：git branch
 --> 
