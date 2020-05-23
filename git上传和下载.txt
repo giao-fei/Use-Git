@@ -29,7 +29,7 @@
         由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：
            git push origin master
     十四、当每次修改完项目再上传后需要重新 git add . 再 git commit -m "xxx"
-    十五、上传出现 ![reject]xxx 的时候，需要 git pull --rebase origin master 然后再 git push origin master
+    十五、上传出现 ![reject]xxx 的时候，需要 git pull origin master --allow-unrelated-histories 再重新add和commit相应文件然后再 git push origin master
   git下载：
     git clone "项目地址"
   git删除：
