@@ -42,7 +42,16 @@
         5、git rm -r --cached xxx(你的文件夹名称)     # 删除xxx文件夹
         6、git commit -m '删除了target'              # 提交,添加操作说明
         7、git push -u origin master                # 将本次更改更新到github项目上去
-   git新建分支：
-     一、git checkout -b xxx(分支名称)
-     二、查看所有分支：git branch
+git分支：
+     tips: master是主分支，都是其它子分支合并到主分支的
+     一、查看项目状态：git status
+     二、新建子分支：git checkout -b xxx(子分支名称)
+     三、查看所有分支状态：git branch
+     四、切换分支：git checkout xxx (xxx是分支的名称)
+     五、合并子分支到主分支上：1、先切换到主分支上 2、再git merge xxx (xxx是子分支名称)
+     六、将主分支推到码云或github上：git push
+     六、怎样将子分支推送到码云或者github上？
+            1、先切换到子分子上：git checkout xxx(xxx是子分支的名称)
+            2、git branch
+            3、git push -u origin xxx(xxx是子分支的名称)
 --> 
