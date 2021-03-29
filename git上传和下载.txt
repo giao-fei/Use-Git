@@ -1,5 +1,4 @@
-<!-- 
-  git上传：
+git上传：
     一、官网下载git安装包
     二、安装git，一直默认到安装完成
           配置个人的用户名称和电子邮件地址：
@@ -29,10 +28,10 @@
         由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：
            git push origin master
     十四、当每次修改完项目再上传后需要重新 git add . 再 git commit -m "xxx"
-    十五、上传出现 ![reject]xxx 的时候，需要 git pull origin master --allow-unrelated-histories 再重新add和commit相应文件然后再 git push origin master
-  git下载：
+    十五、上传出现 ![reject]xxx 的时候，需要 git pull origin master --allow-unrelated-histories 然后再 git add . 再 git commit -m 'xxx' 再 git push origin master
+git下载：
     git clone "项目地址"
-  git删除：
+git删除：
     一、删除本地仓库已关联的远程仓库：git remote rm origin 
     二、用git删除github中某个文件夹：
         1、首先进入你的本地git仓库中
@@ -54,4 +53,8 @@ git分支：
             1、先切换到子分子上：git checkout xxx(xxx是子分支的名称)
             2、git branch
             3、git push -u origin xxx(xxx是子分支的名称)
---> 
+git报错解决：
+     1、Authentication failed for 'https://gitee.com/fly_again/test.git/'：的身份验证失败'https://gitee.com/flyüagain/test.git/'
+             清除密码缓存：git config --system --unset credential.helper
+     2、git错误 error: failed to push some refs to 'https://github.com/...
+             使用命令行：git pull --rebase origin master  该命令的意思是把远程库中的更新合并到（pull=fetch+merge）本地库中，–-rebase的作用是取消掉本地库中刚刚的commit，并把他们接到更新后的版本库之中。出现如下图执行pull执行成功后，可以成功执行git push origin master操作。
