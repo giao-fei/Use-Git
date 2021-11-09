@@ -60,3 +60,8 @@ git报错解决：
             - 使用命令行：git pull --rebase origin master  该命令的意思是把远程库中的更新合并到（pull=fetch+merge）本地库中，–-rebase的作用是取消掉本地库中刚刚的commit，并把他们接到更新后的版本库之中。出现如下图执行pull执行成功后，可以成功执行git push origin master操作。
      3、 git commit 提交的时候报错husky > pre-commit hook failed (add --no-verify to bypass)（解决办法）：
             - 将git commit -m "XXX" 改为 git commit --no-verify -m "XXX"
+     4、Node Sass could not find a binding for your current environment 找不到当前环境（例如：node版本更新）:
+            - 先删除项目中的node_modules
+            - npm install -g node-gyp 再 npm install -global -production windows-build-tools
+            - npm i
+            - npm rebuild
